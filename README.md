@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-wither-arena/releases">Releases</a>
 </p>
@@ -30,11 +31,23 @@
 
 Restricts Wither spawning to a designated arena, prevents block destruction, and controls mob spawning and block breaking in the arena. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
-- Restrict Wither spawning to a designated arena
-- Prevent destructive arena block damage
-- Control mob spawning and player block interaction inside the arena
+- Restricts Wither spawning to a fixed Overworld arena and blocks Withers elsewhere.
+- Prevents explosion damage, unwanted mob spawns, and unauthorized block changes inside the arena.
+- Provides a temporary operator repair mode that suspends block protection.
+
+## How to use
+
+1. Review and, if necessary, change the arena boundary constants and allowed entity/block sets before building the wheel.
+2. Start the server and test Wither spawning just inside and outside every arena boundary.
+3. Run `/arena-repair on` before maintenance and always run `/arena-repair off` immediately afterward.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/arena-repair [on\|off]` | Toggle arena repair mode (disables block protection for all players) | `wither_arena.repair` |
 
 ## Compatibility
 
