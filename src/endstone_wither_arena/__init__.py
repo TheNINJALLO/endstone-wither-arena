@@ -9,4 +9,4 @@ and protects blocks from being broken (except specific items like shulker boxes 
 from endstone_wither_arena.wither_arena import WitherArenaPlugin
 
 __all__ = ["WitherArenaPlugin"]
-__version__ = "2.0.0"
+__version__ = "2.0.5"
